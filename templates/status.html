@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+		<title>Is everything borked yet?</title>
+	</head>
+	<body>
+		{% for service in services %}
+			<div>
+			{% if service["online"] %}
+    				<span class="icon has-text-success">
+					<i class="fas fa-check"></i>
+				</span>
+				{{ service["name"] }} is working
+			{% else %}
+				<span class="icon has-text-danger">
+					<i class="fas fa-times"></i>
+				</span>
+				{{ service["name"] }} is BORKED.
+			{% endif %}
+			</div>
+		{% endfor %}
+		</ul>
+	</body>
+</html>

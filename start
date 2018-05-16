@@ -1,0 +1,4 @@
+rm services.db
+python3 addservices.py
+. venv/bin/activate
+gunicorn status:app
