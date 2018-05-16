@@ -1,6 +1,9 @@
 # Virtual Environment
 venv/
 
+# Database
+services.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
