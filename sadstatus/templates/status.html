@@ -7,16 +7,16 @@
 	<body>
 		{% for service in services %}
 			<div>
-			{% if service["online"] %}
+			{% if service.online %}
     				<span class="icon has-text-success">
 					<i class="fas fa-check"></i>
 				</span>
-				{{ service["name"] }} is working
+				{{ service.name }} is working
 			{% else %}
 				<span class="icon has-text-danger">
 					<i class="fas fa-times"></i>
 				</span>
-				{{ service["name"] }} is BORKED.
+				{{ service.name }} has been BORKED since {{service.broken_since}}.
 			{% endif %}
 			</div>
 		{% endfor %}
