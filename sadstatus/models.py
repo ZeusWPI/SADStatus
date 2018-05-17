@@ -1,4 +1,5 @@
 from .app import db
+from datetime import datetime
 
 
 class Service(db.Model):
@@ -7,7 +8,7 @@ class Service(db.Model):
     url = db.Column(db.String(1024), unique=True, nullable=False)
     # Broken since if now broken, else last date thing was broken
     broken_since = db.Column(db.DateTime)
-    last_checked = db.Column(db.DateTime)
+    last_checked = db.Column(db.DateTime, default=datetime.fromtimestamp(0), nullable=False)
     online = db.Column(db.Boolean)
 
     def __repr__(self):
