@@ -8,6 +8,8 @@ Checks if Zeus-**S**ervices **A**re **D**own.
 virtualenv venv
 # Edit configuration in config.py
 "${EDITOR:-vi}" config.py
+# Activate virtualenv
+. venv/bin/activate
 # Create database and fill it
 ./setup_database.py
 ```
