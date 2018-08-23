@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
-from sadstatus.app import db, models
+from app.app import db, models
 
 db.create_all()
 
 services = {
     "Website": "https://zeus.ugent.be/",
-    "Haldis": "https://zeus.ugent.be/haldis",
-    "Tab": "https://zeus.ugent.be/tab",
-    "Tap": "https://zeus.ugent.be/tap",
+    "Haldis": "https://haldis.zeus.gent",
+    "Tab": "https://tab.zeus.gent",
+    "Tap": "https://tap.zeus.gent",
     "Cammie": "https://zeus.ugent.be/cammie",
     "Slotmachien": "https://kelder.zeus.ugent.be/slotmachien",
     "Wiki": "https://zeus.ugent.be/wiki"

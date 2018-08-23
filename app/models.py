@@ -1,5 +1,5 @@
-from .app import db
 from datetime import datetime
+from .app import db
 
 
 class Service(db.Model):
@@ -15,6 +15,6 @@ class Service(db.Model):
         return '<Service %r>' % self.name
 
     def __init__(self, name, url):
-        super(self.__class__, self).__init__()
+        super()
         self.name = name
         self.url = url

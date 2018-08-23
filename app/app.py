@@ -1,6 +1,6 @@
+from datetime import datetime
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
 import config
 
 
@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-from sadstatus import models, checker
+from app import models, checker
 
 
 @app.route("/")
