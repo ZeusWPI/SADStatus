@@ -1,5 +1,5 @@
 from datetime import timedelta
 
-DATABASE_URL = 'sqlite:////tmp/sadstatus.db'
+DATABASE_URL = 'mysql://sadstatus:lifeissad@localhost/sadstatus'
 
 CHECK_INTERVAL = timedelta(minutes=5)
