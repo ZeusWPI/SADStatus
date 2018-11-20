@@ -11,7 +11,10 @@ services = {
     "Tap": "https://tap.zeus.gent",
     "Cammie": "https://zeus.ugent.be/cammie",
     "Slotmachien": "https://kelder.zeus.ugent.be/slotmachien",
-    "Wiki": "https://zeus.ugent.be/wiki"
+    "Wiki": "https://zeus.ugent.be/wiki",
+    "Gamification": "https://zeus.ugent.be/game",
+    "Mattermost": "https://mattermost.zeus.gent",
+    "Cammiechat": "https://kelder.zeus.ugent.be/messages"
 }
 
 for name, url in services.items():
