@@ -7,7 +7,7 @@
 	<body>
 		{% for service in services %}
 			<div>
-			{% if service.online %}
+			{% if service.online or override %}
     				<span class="icon has-text-success">
 					<i class="fas fa-check"></i>
 				</span>

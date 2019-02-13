@@ -19,8 +19,11 @@ def message():
     # update
     update_online_status()
 
-    return render_template("status.html", services=models.Service.query.all())
+    return render_template("status.html", services=models.Service.query.all(), override=False)
 
+@app.route("/happy")
+def happy():
+    return render_template("status.html", services=models.Service.query.all(), override=True)
 
 def update_online_status():
     last_possible_time = datetime.now() - config.CHECK_INTERVAL
