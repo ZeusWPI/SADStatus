@@ -13,7 +13,7 @@ services = {
     "Wiki": "https://zeus.ugent.be/wiki",
     "Gamification": "https://zeus.ugent.be/game",
     "Mattermost": "https://mattermost.zeus.gent",
-    "Cammiechat": "https://kelder.zeus.ugent.be/messages",
+    "Cammiechat": "https://kelder.zeus.ugent.be/messages/",
     "Cat": "https://cat.zeus.gent"
 }
 
