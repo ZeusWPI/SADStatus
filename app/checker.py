@@ -19,7 +19,7 @@ def status(service):
                 return Status.BROKEN
         except urllib.error.HTTPError:
             # urllib likes to throw HTTPErrors, meaning it failed
-            return Status.NO_LOGIN
+            return Status.UNAUTHORIZED
         except Exception as e:
             # Anything else is broken
             return Status.BROKEN
