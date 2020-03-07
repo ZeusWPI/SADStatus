@@ -7,11 +7,31 @@
 	<body>
 		{% for service in services %}
 			<div>
-			{% if service.online or override %}
+			{% if (service.status == Status.ONLINE.value) or override %}
     				<span class="icon has-text-success">
 					<i class="fas fa-check"></i>
 				</span>
 				{{ service.name }} is working
+			{% elif service.status == Status.PROTECTED.value %}
+    				<span class="icon has-text-success">
+					<i class="fas fa-lock"></i>
+				</span>
+				{{ service.name }} is working and password protected
+			{% elif service.status == Status.LOGIN_FAILED.value %}
+    				<span class="icon has-text-danger">
+					<i class="fas fa-lock"></i>
+				</span>
+				{{ service.name }} could not log in
+			{% elif service.status == Status.UNAUTHORIZED.value %}
+    				<span class="icon has-text-danger">
+					<i class="fas fa-lock"></i>
+				</span>
+				{{ service.name }} requested an unexpected authentication
+			{% elif service.status == Status.NO_LOGIN.value %}
+    				<span class="icon has-text-danger">
+					<i class="fas fa-unlock"></i>
+				</span>
+				{{ service.name }} didn't request authentication
 			{% else %}
 				<span class="icon has-text-danger">
 					<i class="fas fa-times"></i>
